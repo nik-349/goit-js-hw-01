@@ -1,32 +1,46 @@
+
 let price;
+let message;
+let country = prompt('Выберите страну доставки');
 
-const country = prompt('Укажите страну доставки.');
-switch (country.toLowerCase()) {
- case 'китай':
-    price = 100;
-    break;
 
- case 'чили':
-    price = 250;
-    break;
+if (country !== null){
 
- case 'австралия':
-    price = 170;
-    break;
+switch (country){
+    case 'Китай':
+        price = 100;
+        message = `Доставка в ${country} будет стоить ${price} кредитов`;
+        break;
+
+    case 'Чили': {
+        price = 250;
+        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        break;
+        }
+
+    case 'Австралия': {
+        price = 170;
+        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        break;
+        }
+
+    case 'Индия': {
+        price = 80;
+        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        break;
+        }
     
- case 'индия':
-    price = 80;
-    break;
+    case 'Ямайка': {
+        price = 120;
+        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        break;
+        } 
 
- case 'ямайка':
-    price = 120;
-    break;
+    default: 
+        message = 'В вашей стране доставка не доступна'
 
-    default:
-        alert('В вашей стране доставка не доступна');
 }
-if (price !== undefined) {
-    console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-    alert(`Доставка в ${country} будет стоить ${price} кредитов`);
+alert(message);
+} else {
+    alert('Вы отменили доставку');
 }
-
