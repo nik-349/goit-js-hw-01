@@ -6,33 +6,33 @@ let country = prompt('Выберите страну доставки');
 
 if (country !== null){
 
-switch (country){
-    case 'Китай':
+switch (country.toLowerCase()) {
+    case 'китай':
         price = 100;
-        message = `Доставка в ${country} будет стоить ${price} кредитов`;
+        message = `Доставка в Китай будет стоить ${price} кредитов`;
         break;
 
-    case 'Чили': {
+    case 'чили': {
         price = 250;
-        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        message = `Доставка в Чили будет стоить ${price} кредитов`
         break;
         }
 
-    case 'Австралия': {
+    case 'австралия': {
         price = 170;
-        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        message = `Доставка в Австралия будет стоить ${price} кредитов`
         break;
         }
 
-    case 'Индия': {
+    case 'индия': {
         price = 80;
-        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        message = `Доставка в Индия будет стоить ${price} кредитов`
         break;
         }
     
-    case 'Ямайка': {
+    case 'ямайка': {
         price = 120;
-        message = `Доставка в ${country} будет стоить ${price} кредитов`
+        message = `Доставка в Ямайка будет стоить ${price} кредитов`
         break;
         } 
 
